@@ -45,7 +45,7 @@ void count_occurrences (int n, FILE *file, Entry *entries) {
 	int i;
 	while((fgets(get, LINE_MAX_CHARS, file))!=NULL){
 		for(i=0;i<n;i++){
-			ret = strstr(b, entries[i].string);
+			ret = strstr(get, entries[i].string);
 			while(ret!=NULL){
 				ret = strstr(ret+1, entries[i].string);
 				entries[i].count++;
